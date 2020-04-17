@@ -9,11 +9,11 @@ public class ThirdTask {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Iveskite du skaicius ir veiksma tarp ju, pvz: 12 - 10:");
 
-        String line = scanner.nextLine()
+        String line = scanner.nextLine();
         String[] items = line.split(" ");
 
-        int firstNumber = (int) NumberUtils.getCorrectNumber(scanner,items[1])
-        int secondNumber = Integer.parseInt(items[2]);
+        int firstNumber = (int) NumberUtils.getCorrectNumber(scanner,items[0]);
+        int secondNumber = (int) NumberUtils.getCorrectNumber(scanner,items[2]);
 
         callRequiredAction(items[1],firstNumber, secondNumber, scanner);
 
