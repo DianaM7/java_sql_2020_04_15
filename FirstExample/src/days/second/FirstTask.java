@@ -1,5 +1,6 @@
 package days.second;
 
+import java.text.DecimalFormat;
 import java.util.InputMismatchException;
 import java.util.Scanner;
 
@@ -25,7 +26,7 @@ public class FirstTask {
                     firstTask.countSquare(scanner);
                     break;
                 case 4:
-                    firstTask.countCircle(scanner);
+                    firstTask.countCircle1(scanner);
                     break;
                 case 5:
                     System.out.println("Viso gero");
@@ -66,16 +67,18 @@ public class FirstTask {
 
     private void countCircle(Scanner scanner) {
         System.out.println("Iveskite apskritimo spinduli:");
-        int a = (int) NumberUtils.getCorrectNumber(scanner);
+        double r = NumberUtils.getCorrectNumber(scanner);
+        DecimalFormat df = new DecimalFormat("0.00");
         double pi = 3.1415;
 
-        System.out.println("Apskritimo plotas yra " + pi * (a ^ 2));
+        System.out.println("Apskritimo plotas yra " + Math.pow(r, 2) * pi);
 
     }
 
     private  void countCircle1(Scanner scanner){
         System.out.println("Iveskite spinduli:");
         double r = NumberUtils.getCorrectNumber(scanner);
+        DecimalFormat df = new DecimalFormat("0.00");
         double pi = 3.1415;
         System.out.println("Apskritimo plotas: " + Math.pow(r, 2) * pi);
     }
