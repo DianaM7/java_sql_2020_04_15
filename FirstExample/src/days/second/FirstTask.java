@@ -12,7 +12,7 @@ public class FirstTask {
         while (selection != 5) {
             System.out.println("1. Staciojo trikampio plotas\n2. Staciakampio plotas\n3. Kvadrato plotas\n4. Apskritimo plotas\n5. Baigti");
 
-            selection = firstTask.getCorrectNumber(scanner);
+            selection = (int) NumberUtils.getCorrectNumber(scanner);
 
             switch (selection) {
                 case 1:
@@ -41,32 +41,32 @@ public class FirstTask {
 
     private void countTriangle(Scanner scanner) {
         System.out.println("Iveskite pirma statini:");
-        int a = getCorrectNumber(scanner);
+        int a = (int) NumberUtils.getCorrectNumber(scanner);
         System.out.println("Iveskite antra statini:");
-        int b = getCorrectNumber(scanner);
+        int b = (int) NumberUtils.getCorrectNumber(scanner);
 
         System.out.println("Trikampio plotas yra " + a * b / 2);
     }
 
     private void countRectangular(Scanner scanner) {
         System.out.println("Iveskite pirma krastine:");
-        int a = getCorrectNumber(scanner);
+        int a = (int) NumberUtils.getCorrectNumber(scanner);
         System.out.println("Iveskite antra krastine:");
-        int b = getCorrectNumber(scanner);
+        int b = (int) NumberUtils.getCorrectNumber(scanner);
 
         System.out.println("Staciakampio plotas yra " + a * b);
     }
 
     private void countSquare(Scanner scanner) {
         System.out.println("Iveskite kvadrato krastine:");
-        int a = getCorrectNumber(scanner);
+        int a = (int) NumberUtils.getCorrectNumber(scanner);
 
         System.out.println("Kvadrato plotas yra " + a * a);// + Math.pow(a, 2)
     }
 
     private void countCircle(Scanner scanner) {
         System.out.println("Iveskite apskritimo spinduli:");
-        int a = getCorrectNumber(scanner);
+        int a = (int) NumberUtils.getCorrectNumber(scanner);
         double pi = 3.1415;
 
         System.out.println("Apskritimo plotas yra " + pi * (a ^ 2));
@@ -75,21 +75,11 @@ public class FirstTask {
 
     private  void countCircle1(Scanner scanner){
         System.out.println("Iveskite spinduli:");
-        double r = getCorrectNumber(scanner);
+        double r = NumberUtils.getCorrectNumber(scanner);
         double pi = 3.1415;
         System.out.println("Apskritimo plotas: " + Math.pow(r, 2) * pi);
     }
 
-    private int getCorrectNumber(Scanner scanner) {
-        while (true) {
-            try {
-                int number = scanner.nextInt();
-                return number;
-            } catch (InputMismatchException ex) {
-                System.out.println("Ivedete bloga skaiciu. Pakartokite:");
-                scanner.nextLine();
-            }
-        }
-    }
+
 }
 
