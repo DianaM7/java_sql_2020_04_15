@@ -19,7 +19,7 @@ public class ThirdTask {
 
     }
 
-    private static  void callRequiredAction(String action, int firstNumber, int secondNumber, Scanner scanner){
+    private static void callRequiredAction(String action, int firstNumber, int secondNumber, Scanner scanner){
         Calculator calculator = new Calculator(firstNumber, secondNumber);
         switch (action){
             case "+":
