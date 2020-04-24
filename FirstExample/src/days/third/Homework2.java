@@ -14,12 +14,12 @@ public class Homework2 {
     }
     private static void userArrayData (Scanner scanner) {
         System.out.println("Kiek skaiciu ketinate ivesti?:");
-        int q = (int) NumberUtils.getCorrectNumber(scanner);
+        int q = (int) NumberUtils.getCorrectNumber(scanner); //or int q = scanner.nextInt();
 
         int[] userArray = new int[q];
         for (int i = 0; i < q; i++) {
-            System.out.println("Iveskite skaiciu:");
-            userArray[i] = (int) NumberUtils.getCorrectNumber(scanner);
+            System.out.println("Iveskite skaiciu:");//or System.out.println(String.format("Iveskite %d elementa", i + 1));
+            userArray[i] = (int) NumberUtils.getCorrectNumber(scanner);//or userArray[i] = scanner.nextInt();
         }
         System.out.println("Masyvo skaiciai, kurie didesni uz 100, yra sie: ");
         int sum = 0;

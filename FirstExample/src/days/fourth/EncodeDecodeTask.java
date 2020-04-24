@@ -3,10 +3,7 @@ package days.fourth;
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class EncodeDecodeTask {
 
@@ -24,7 +21,7 @@ public class EncodeDecodeTask {
                 stringBuilder.append(value.equals("tarpas") ? " " : value);
             }
         }
-        //convert StringBuilder to sting and print
+        //convert StringBuilder to string and print
         System.out.println(stringBuilder.toString());
 
 
@@ -54,7 +51,7 @@ public class EncodeDecodeTask {
 
     private static void readCode(){
         //nuskaitom teksta - read file from rood directory
-        //try() uing for close stream in any case
+        //try() using for close stream in any case
         try(BufferedReader bf = new BufferedReader(new FileReader("koduote.txt"))){
 
             String line;
@@ -68,6 +65,13 @@ public class EncodeDecodeTask {
         }catch(IOException e){
             System.out.println("Klaida nuskaitant faila " + e.getMessage());
         }
+
+    }
+
+    private static void codeLetter(){
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Iveskite teksta, kuri norite uzkoduoti:");
+
 
     }
 

@@ -14,7 +14,6 @@ public class SecondTask {
         for(int i = 0; i < mas.length; i++){
             System.out.println(String.format("Iveskite %d elementa", i));
             mas[i] = scanner.nextInt();
-
         }
 
         for(int i = 0; i < mas.length; i++){

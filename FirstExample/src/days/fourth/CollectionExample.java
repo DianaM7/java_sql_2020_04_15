@@ -2,6 +2,7 @@ package days.fourth;
 
 import org.w3c.dom.ls.LSOutput;
 
+import javax.sound.midi.Soundbank;
 import java.util.*;
 
 public class CollectionExample {
@@ -11,8 +12,12 @@ public class CollectionExample {
         //setExample();
         //mapExample();
 
-        User user = new User("andrius", "Blatunas");
+        User user = new User("andrius", "Baltrunas");
         System.out.println(user.getName() + " " + user.getSurname());
+
+        mapExample();
+        setExample();
+        listExample();
 
     }
     private static void mapExample(){

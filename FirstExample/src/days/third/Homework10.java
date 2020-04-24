@@ -1,5 +1,7 @@
 package days.third;
 
+import org.w3c.dom.ls.LSOutput;
+
 import java.util.Scanner;
 
 public class Homework10 {
@@ -8,17 +10,17 @@ public class Homework10 {
 
         Scanner scanner = new Scanner(System.in);
         String word;
-        do{
-            System.out.println("Iveskite zodi:");
-            word = scanner.nextLine();
 
-            System.out.println("Raidziu a zodyje yra: " + countLetters(word, 'a'));
+        System.out.println("Iveskite zodi:");
+        word = scanner.nextLine();
 
-        }while(!"pabaiga".equalsIgnoreCase(word));
-
+        System.out.println("Raidziu a zodyje yra: " + countLetters(word, 'a'));
     }
 
     private static int countLetters(String word, char letter){
+        if(word == null || word.length() == 0){
+            return 0;
+        }
         int count = 0;
         for(int i=0; i < word.length(); i++){
             if(letter == word.charAt(i)){
@@ -26,6 +28,4 @@ public class Homework10 {
             }
         }return count;
     }
-
-
 }

@@ -5,7 +5,7 @@ import days.second.NumberUtils;
 import java.util.Arrays;
 import java.util.Collections;
 import java.util.Scanner;
-
+//doesn't work properly
 public class Exercise7 {
 
     public static void main(String[] args) {
@@ -89,7 +89,7 @@ public class Exercise7 {
                 break;
             case 7:
                 Arrays.sort(userArray);
-                System.out.print("5-Apverstas masyvas: ");
+                System.out.print("7-Masyvas surikiuotas mazejimo tvarka: ");
                 int[] arrayTemporary1 = new int[userArray.length];
                 for (int i = 0; i < userArray.length; i++){
                     arrayTemporary1[i] = userArray[userArray.length-1-i];
@@ -98,10 +98,8 @@ public class Exercise7 {
                 repeatArrayActionChoise(scanner);
                 break;
             default:
-                System.out.println("Tokio veiksmo nera");
+                System.out.println("Joks veiksmas nebus atliekamas. Programos pabaiga.");
                 break;
-
-
         }
 
 

@@ -13,10 +13,10 @@ public class Homework1 {
         int number = (int) NumberUtils.getCorrectNumber(scanner);
 
         if(number %2 == 0){
-            System.out.println("Ivestas skaicius yra lyginis");
+            System.out.println(String.format("Ivestas skaicius %d yra lyginis", number));
         }
         else{
-            System.out.println("Ivestas skaicius yra nelyginis");
+            System.out.println(String.format("Ivestas skaicius %d yra nelyginis", number));
         }
     }
 }
