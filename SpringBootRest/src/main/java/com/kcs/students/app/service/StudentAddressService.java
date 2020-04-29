@@ -85,7 +85,7 @@ public class StudentAddressService {
 
         if(preparedStatement != null){
             try{
-                if(studentId != 0){
+                if(studentId != null){
                     preparedStatement.setInt(1, studentId);
                 }
 
