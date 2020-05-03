@@ -33,10 +33,10 @@ public class StundentsController {
         return studentsService.createStudent(student);
     }
     /*TODO
-     *1. sukurti metoda controlleryje void deleteStudent(@PathVariable("id") int id).naudoti @DeleteMapping
+     * 1. sukurti metoda controlleryje void deleteStudent(@PathVariable("id") int id).naudoti @DeleteMapping
      * ("/{id}/student/delete)
      * 2. sukurti metoda student service void deleteStudent(int id)
-     *istrinti studenta
+     * istrinti studenta
      */
     @DeleteMapping("/{id}/student/delete")
     public void deleteStudent(@PathVariable("id") int id){
